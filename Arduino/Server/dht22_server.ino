@@ -28,14 +28,14 @@ char* server = "your_server";
 dht DHT;
 float t = 0, h = 0; //, p = 0; <- TODO: Gestire la pressione
 
-// Gestione connessione al server
+// Gestione connessione al server da parte del client
 WiFiClient client;
 
 /* Funzione iniziale */
 void setup() {
   Serial.begin(115200);
 
-  // Connessione al server remoto
+  // Connessione al router
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print("Connessione alla rete ");
     Serial.println(ssid);
